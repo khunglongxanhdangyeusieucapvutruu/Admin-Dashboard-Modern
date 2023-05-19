@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm mới tin tức</title>
+    <script src="https://cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mb-4 pt-3">
+            <div class="col-sm-6">
+                <h1>THÊM MỚI TIN TỨC</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-end">
+                    <li class="breadcrumb-item "><a href="#">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Thêm mới tin tức</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Main content -->
+        <div class="content">
+            <div class="card-header">
+                <form action="" method="post">
+                    <div class="form-group mb-2">
+                        <label for="inputTieuDe">Tiêu đề</label>
+                        <input type="text" id="inputTieuDe" class="form-control">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="inputMoTa">Mô tả</label>
+                        <textarea id="inputMoTa" class="form-control" rows="4"></textarea>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="inputNoiDung">Nội dung</label>
+                        <textarea name="inputNoiDung" class="form-control" rows="4"></textarea>
+                        <script>
+                            CKEDITOR.replace('inputNoiDung');
+                        </script>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="inputDanhMuc">Danh mục</label>
+                        <select id="inputDanhMuc" class="form-control custom-select">
+                            <option selected disabled>Select one</option>
+                            <option>On Hold</option>
+                            <option>Canceled</option>
+                            <option>Success</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="inputAnh">Ảnh nền</label>
+                        <input class="form-control" type="file" id="inputAnh">
+                    </div>
+                    <input type="submit" value="Thêm mới" class="btn btn-success">
+                    <a href="#" class="btn btn-secondary">Hủy</a>
+                </form>
+            </div>
+        </div>
+        <!-- /.content-wrapper -->
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
